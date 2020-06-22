@@ -1,6 +1,6 @@
 # PayloadShots
 
-This script is made to automate the task of reporting many XSS vulnerabilities, and to take a screenshot of each one.
+This application is made to automate the task of reporting many XSS vulnerabilities, and to take a screenshot of each one.
 
 It is a very simple script, and it could be improved a lot, although for the task that has been created it is enough.
 
@@ -17,11 +17,21 @@ At the moment it only works with the drivers below:
 - [ ] Microsoft Edge WebDriver
 - [ ] Microsoft Edge Legacy WebDriver
 
+## Requirements
+First install the necessary packages with the following command:
+```
+python -m pip install -U -r requirements.txt
+```
+
+Then, download the driver supported from official webpage:
+- [Geckodriver](https://github.com/mozilla/geckodriver/releases)
+- [Chromedriver](https://chromedriver.chromium.org/downloads) - Please, if you doubt the version to choose, look at the [version-selection](https://chromedriver.chromium.org/downloads/version-selection) page
+
 
 ## Quickstart
-This takes two maximized screenshots from `example_list.txt` included in this repository:
+This example takes two screenshots from `example_list.txt` included in this repository:
 ```
-python payloadshots.py -b firefox -l example_list.txt -m
+python payloadshots.py -b firefox -l example_list.txt
 ```
 
 ## Help
@@ -46,5 +56,12 @@ optional arguments:
   ```
 
 ## TODO
+- [ ] Add pip pakage support
 - [ ] Add support for more WebDrivers
 - [ ] Add support for other type of exploitations (screenshots without alerts, inject scripts on webpages, connect with debugger, etc)
+
+## Credits
+Software used by this application:
+- [Selenium](https://github.com/SeleniumHQ/selenium/blob/master/LICENSE)
+- [PyAutoGUI](https://github.com/asweigart/pyautogui/blob/master/LICENSE.txt)
+- [pywin32](https://github.com/mhammond/pywin32)
