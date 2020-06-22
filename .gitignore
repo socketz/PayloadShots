@@ -411,3 +411,9 @@ $RECYCLE.BIN/
 # PayloadShots custom
 payloads_screenshots/
 *.exe
+
+# Compiled python modules.
+*.pyc
+
+# Setuptools distribution folder.
+dist/

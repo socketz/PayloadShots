@@ -8,15 +8,6 @@ If you have suggestions for improvements, do not hesitate to open an issue.
 
 ***IMPORTANT NOTE**: Headless execution is not possible, as the alert popup blocks the ability to capture screenshots using Selenium (get_screenshot_as_file and other methods), so this script provides the functionality to be able to capture all the window including the alert popup.*
 
-At the moment it only works with the drivers below:
-- [x] Geckodriver
-- [x] Chromedriver
-- [ ] OperaChromiumDriver
-- [ ] Safari WebDriver
-- [ ] InternetExplorerDriver
-- [ ] Microsoft Edge WebDriver
-- [ ] Microsoft Edge Legacy WebDriver
-
 ## Requirements
 First install the necessary packages with the following command:
 ```
@@ -27,14 +18,23 @@ Then, download the driver supported from official webpage:
 - [Geckodriver](https://github.com/mozilla/geckodriver/releases)
 - [Chromedriver](https://chromedriver.chromium.org/downloads) - Please, if you doubt the version to choose, look at the [version-selection](https://chromedriver.chromium.org/downloads/version-selection) page
 
-
 ## Quickstart
 This example takes two screenshots from `example_list.txt` included in this repository:
 ```
 python payloadshots.py -b firefox -l example_list.txt
 ```
 
-## Help
+### Support
+Windows only at the moment and it only works with the drivers below:
+- [x] Geckodriver
+- [x] Chromedriver
+- [ ] OperaChromiumDriver
+- [ ] Safari WebDriver
+- [ ] InternetExplorerDriver (Windows only)
+- [ ] Microsoft Edge WebDriver (Windows only)
+- [ ] Microsoft Edge Legacy WebDriver (Windows only)
+
+### Help
 ```
 usage: payloadshots.py [-h] --browser {firefox,chrome} [--window-size WINDOW_SIZE] [--maximized] [--url URL] [--path PATH] [--name NAME] [--list URL_LIST] [--show]
 
@@ -56,6 +56,7 @@ optional arguments:
   ```
 
 ## TODO
+- [ ] Multiplatform support
 - [ ] Add pip pakage support
 - [ ] Add support for more WebDrivers
 - [ ] Add support for other type of exploitations (screenshots without alerts, inject scripts on webpages, connect with debugger, etc)
